@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wochentagsberechnung mit JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-6">
+    <div class="max-w-md mx-auto bg-white shadow-md rounded-md p-6">
+        <h1 class="text-2xl font-bold mb-6 text-blue-700">Wochentagsberechnung mit JavaScript</h1>
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Bitte geben Sie ein Datum ein:</h2>
+        <form class="space-y-4" id="meinFormular">
+            <div>
+                <label for="datum" class="block text-gray-700 text-sm font-bold mb-2">Datum:</label>
+                <input type="date" id="datum" name="datum" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Absenden</button>
+            </div>
+        </form>
+        <div id="result" class="mt-4 p-3 bg-gray-200 rounded-md text-gray-700">
+            </div>
+    </div>
+
+    <script>
+        document.getElementById('meinFormular').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das Standardmäßige Absenden des Formulars
+
+            // Hier könnte die Logik der Funktion stehen, die das Ergebnis ermittelt
+            const ergebnisText = "Ergebnis";
+
+            // Schreibe den Text in das Div mit der ID "result"
+            document.getElementById('result').textContent = ergebnisText;
+        });
+    </script>
+</body>
+</html>
